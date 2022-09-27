@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.form__container {
+    width: 600px;
+    min-width: 250px;
+    padding: 50px 40px;
+    box-shadow: 5px 5px 30px #999;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: black;
+    text-align: left;
+}
+
+.container>input {
+    border: none;
+    border-bottom: 1px solid #999;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+}
+
+.container>input:focus {
+    border-color: #D60000;
+    transition: border-color .4s;
+}
+
+h1+input {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #999;
+    font-weight: 200;
+}
+
+.forgot a {
+    text-decoration: none;
+    color: #999;
+    font-size: 13px;
+}
+
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% 60%;
+}
+
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #D60000;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: #D60000;
+    background-color: #D60000;
+    transition: all .5s;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.custom-checkbox>input:checked+span {
+    color: black;
+    transition: color .5s;
+}
+
+.btn {
+    color: white;
+    background-color: #D60000;
+    border: none;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 90px;
+}
+
+.btn:hover{
+    color: #D60000;
+    border: 1px solid #D60000;
+    background-color: white;
+}
+
+.icons__container {
+    text-align: center;
+}
+
+.icons__container p{
+    margin-bottom: 40px;
+    font-weight: 100;
+}
+
+.icons {
+    color: #999;
+    font-size: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.icons i {
+    margin: 0 13px;
+    cursor: pointer;
+    transition: color .6s;
+}
+
+.icons a {
+    color: #999;
+}
+
+.icons i:hover {
+    color: black;
+}
